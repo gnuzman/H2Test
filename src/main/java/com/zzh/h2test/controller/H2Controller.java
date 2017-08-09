@@ -21,11 +21,11 @@ public class H2Controller {
     private void testDatabase(String url) throws SQLException {
         Connection connection = DriverManager.getConnection(url);
         Statement s = connection.createStatement();
-        try {
-            s.execute("DROP TABLE PERSON");
-        } catch (SQLException sqle) {
-            System.out.println("Table not found, not dropping");
-        }
+//        try {
+//            s.execute("DROP TABLE PERSON");
+//        } catch (SQLException sqle) {
+//            System.out.println("Table not found, not dropping");
+//        }
         s.execute("CREATE TABLE PERSON (ID INT PRIMARY KEY, FIRSTNAME VARCHAR(64), LASTNAME VARCHAR(64))");
         s.execute("INSERT INTO PERSON (ID, FIRSTNAME, LASTNAME) VALUES (1, 'ss', 'bb')");
         s.execute("INSERT INTO PERSON (ID, FIRSTNAME, LASTNAME) VALUES (2, '33', '66')");
