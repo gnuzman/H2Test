@@ -21,3 +21,8 @@ spring:
     maxOpenPreparedStatements: 20
     maxPoolPreparedStatementPerConnectionSize: 20
     filters: stat
+
+#server
+server:
+  port: 28080
+  context-path: /zzh
